@@ -234,7 +234,7 @@ SENTRY_WEB_OPTIONS = {
     "ignore-sigpipe": True,
     "ignore-write-errors": True,
     "disable-write-exception": True,
-    "listen": 10240,
+    "listen": 4096,
 }
 
 ###########
