@@ -332,8 +332,6 @@ services:
       - "sentry-symbolicator:/data"
   web:
     <<: *sentry_defaults
-    sysctls:
-      net.core.somaxconn: 10240
     ulimits:
       nofile:
         soft: 4096
@@ -414,8 +412,6 @@ services:
     ports:
       - "$SENTRY_BIND:80/tcp"
     image: "nginx:1.25.2-alpine"
-    sysctls:
-      net.core.somaxcomm: '10240'
     volumes:
       - type: bind
         read_only: true
