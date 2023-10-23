@@ -335,7 +335,9 @@ services:
     ulimits:
       nofile:
         soft: 4096
-        hard: 4096
+        hard: 10240
+    sysctls:
+      net.core.somaxcomm: '10240'
     healthcheck:
       <<: *healthcheck_defaults
       test:
