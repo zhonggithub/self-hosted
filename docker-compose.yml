@@ -334,7 +334,7 @@ services:
     <<: *sentry_defaults
     ulimits:
       nofile:
-        soft: 4096
+        soft: 10240
         hard: 10240
     sysctls:
       net.core.somaxcomm: '10240'
