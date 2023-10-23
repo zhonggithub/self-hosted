@@ -414,6 +414,8 @@ services:
     ports:
       - "$SENTRY_BIND:80/tcp"
     image: "nginx:1.25.2-alpine"
+    sysctls:
+      net.core.somaxcomm: '10240'
     volumes:
       - type: bind
         read_only: true
