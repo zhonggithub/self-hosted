@@ -330,8 +330,8 @@ services:
       nofile:
         soft: 4096
         hard: 4096
-      privileged:
-        true
+    privileged:
+      true
     healthcheck:
       <<: *healthcheck_defaults
       test:
